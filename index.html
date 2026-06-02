@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>github-porfile-search</title>
+  </head>
+    <body>
+    <header class="w-full h-20 bg-zinc-900 px-12 flex items-center justify-between text-white">
+      <div class="flex items-center gap-2">
+        <span class="github-icon text-4xl text-zinc-300">
+          <i class="fa-brands fa-github"></i>
+        </span>
+        <span class="text-2xl font-Sans-Bold">Search user profile</span>
+      </div>
+      <button
+        id="theme-toggle"
+        class="px-4 py-2 rounded bg-zinc-700 hover:bg-zinc-600"
+      >
+       🌙
+      </button>
+    </header>
+    <main class="w-full my-10 flex items-center justify-center flex-col gap-5 dark:text-white">
+      <div dir="ltr" class="search flex items-center gap-3">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="exam: peymangeek"
+          class="w-150 placeholder:tex-tsm px-4 focus-within:ring-4 duration-300 ring-zinc-800/50 h-12 rounded-md outline-none border-2 bg-white dark:bg-zinc-700 text-black dark:text-white border-gray-200 dark:border-zinc-600"
+          autocomplete="off"
+        />
+        <button
+          id="search-button"
+          class="px-4 h-12 focus-within:ring-4 ring-zinc-900/50 duration-300 rounded-md bg-linear-to-t from-zinc-950 to-zinc-700 text-white"
+        >
+        Search
+        </button>
+      </div>
+      <p id="error-message" class=" mt-24 text-2xl text-olive-800 dark:text-olive-300 font-medium hidden"></p>
+      <div dir="ltr" class="" id="user-card">
+        <div class="card-header flex items-center gap-3">
+          <img
+            src="https://avatars.githubusercontent.com/u/178832070?v=4"
+            id="user-img"
+            class="size-24 rounded-full"
+            alt=""
+          />
+          <div>
+            <p class="font-bold text-2xl" id="user-fullname">
+              Peyman Ahmadi
+            </p>
+            <p
+              id="username"
+              class="text-zinc-500 font-medium mt-1 text-sm"
+            >
+              @peymangeek
+            </p>
+          </div>
+        </div>
+        <div
+          class="mt-6 mb-8 text-zinc-700 dark:text-zinc-300 font-normal w-full text-sm"
+        >
+          <p id="caption">
+            Junior front end developer Learning Nextjs/TypeScript
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-2 child:flex child:w-full child:items-center gap-5 child:gap-2 font-[Poppins]"
+        >
+          <div>
+            <span class="text-xl text-zinc-400">
+              <i class="fas fa-location-dot"></i>
+            </span>
+            <span id="location"> Zanjan, Iran. </span>
+          </div>
+        </div>
+        <div
+          class="my-4 w-full rounded-md bg-zinc-100 dark:bg-zinc-700 h-20 grid grid-cols-3 child:w-full child:flex child:flex-col child:gap-1 child:items-center child:justify-center"
+        >
+          <article>
+            <p id="repositories" class="text-2xl font-extrabold">
+              4
+            </p>
+            <p class="text-zinc-500 dark:text-zinc-300 text-sm">
+              Repositories
+            </p>
+          </article>
+          <article>
+            <p id="followers" class="text-2xl font-extrabold">
+              0
+            </p>
+            <p class="text-zinc-500  text-sm">
+              followers
+            </p>
+          </article>
+          <article>
+            <p id="following" class="text-2xl font-extrabold">
+              2
+            </p>
+            <p class="text-zinc-500  text-sm">
+              following
+            </p>
+          </article>
+        </div>
+        <div id="repos-container">
+          <h3 id="repos"></h3>
+          <ul id="repos-list"></ul>
+        </div>
+       
+        <div class="mt-10" dir="rtl">
+          <a
+            href="https://github.com/peymangeek"
+            target="_blank"
+            id="github-url"
+            class="flex justify-center items-center text-sm text-zinc-700 dark:text-zinc-300 gap-2"
+          >
+            Github page
+            <i
+              class="fa-solid fa-arrow-up-right-from-square text-zinc-500 dark:text-zinc-200 text-sm"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+
+</html>

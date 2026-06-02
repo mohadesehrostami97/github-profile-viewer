@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+body {
+  @apply bg-zinc-100  dark:bg-black;
+}
+
+#user-card {
+  @apply w-3xl p-5 *:px-5  bg-white dark:bg-zinc-800 text-zinc-900 dark:text-white rounded-lg shadow-md mt-5 hover:scale-[1.01] duration-150 hover:shadow-lg;
+}
